@@ -1,0 +1,18 @@
+.Header {
+    margin: auto;
+    margin-top: 70px;
+    width: 880px;
+    height: 70px;
+    background-color: rgb(108, 108, 202);
+    box-shadow: 0px 2px 29px;
+    color: white;
+    text-align: center;
+    border-radius: 5px;
+}
+
+.Header-Text {
+    font: normal normal 40px/90px Roboto;
+    letter-spacing: 0px;
+    color: springgreen;
+    opacity: 1;
+}
