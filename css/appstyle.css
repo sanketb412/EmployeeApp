@@ -12,7 +12,7 @@
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
-    background-color: rgb(114, 114, 206);
+    background-color: rgb(108, 108, 202);
     border-radius: 7px;
     box-shadow: 0px 2px 29px;
     color: white;
@@ -31,7 +31,7 @@
 }
 
 .emp-count {
-    background-color: #82a70c;
+    background-color: #82A889;
     color: #ffffff;
     border-radius: 42%;
     font-size: 16px;
@@ -51,4 +51,55 @@
     padding: 5px 18px;
     cursor: pointer;
     text-decoration: none;
+}
+
+.table-main {
+    width: 80%;
+    margin: -37px auto;
+    overflow: auto;
+}
+
+.table {
+    width: 100%;
+    border-collapse: separate;
+    border-spacing: 1px 15px;
+    min-width: 800px;
+}
+
+td, th {
+    text-align: left;
+    padding: 9px 11px;
+    /* Border: 0px solid #dddddd; */
+}
+
+th {
+    background: #425367 0% 0% no-repeat padding-box;
+    border-radius: 3px 3px 0px 0px;
+
+    text-align: left;
+    font: normal normal medium 18px/24px Roboto;
+    letter-spacing: 0px;
+    color: #ffffff;
+    text-transform: uppercase;
+    opacity: 1;
+    border: 0px solid #dddddd; 
+}
+
+tr:not(:first-child) {
+    background:white 0% 0% no-repeat padding-box;
+    border: 1px solid #e3e3e3;
+    border-radius: 3px;
+}
+
+td {
+    font: normal normal normal 19px/21px Roboto;
+    /* font: normal normal normal 14px/21ppx Roboto; */
+    letter-spacing: 0px;
+    color: #3d3d3d;
+    opacity: 1;
+}
+
+td:first-child {
+    display: flex;
+    align-items: center;
 }
