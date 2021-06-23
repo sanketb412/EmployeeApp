@@ -1,0 +1,22 @@
+{
+  "employees": [
+    {
+      "First_name": "sham",
+      "Last_name": "ron",
+      "E-mail": "kbabuxxxe@gmail.com",
+      "Contact": 212354521,
+      "Start_Date": "26 Nov 2020",
+      "Salary": 5000000,
+      "id": 1
+    },
+    {
+      "First_name": "Peter",
+      "Last_name": "Parker",
+      "E-mail": "ptptxxxe@gmail.com",
+      "Contact": 212454521,
+      "Start_Date": "26 Nov 2020",
+      "Salary": 900000,
+      "id": 2
+    }
+  ]
+}
