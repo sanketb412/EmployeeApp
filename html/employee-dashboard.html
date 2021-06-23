@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en" style= "background-color: slategrey;">
+<html lang="en" style= "background-color: rgb(255, 255, 255);">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -12,14 +12,14 @@
 <body class="body">
     <div class="main-content"> <!-- Declaring main content -->
         <div class="header-content">
-            <div class="emp-detail-text"> <!-- Header Text -->
-                Employee Details <div class="emp-count">1</div>
-            </div>
             <a href="../html/employee-form.html" class="add-button">
                 <img src="../images/add-24px.svg" alt="">Add Employee  <!-- Locating Add User Button to redirect to Form Page -->
             </a>
         </div>
         <div class="table-main">
+            <div class="Head"> 
+                <div class="count">No. of Records:- 1 </div>
+            </div>    
             <table class="table"> <!-- Declaring table to show details in tabular form -->
                 <tr>            
                     <th>First Name</th>
@@ -38,9 +38,9 @@
                     <td>1 Nov 2020</td>
                     <td>5000000</td>
                     <td>
-                        <img id="1" onclick="remove(this)" alt="delete"
+                        <img id="1" onclick="remove(this)" alt="delete" width="30%"
                             src="../images/delete-black-18dp.svg">
-                        <img id="1" alt="edit" onclick="update(this)"
+                        <img id="1" alt="edit" onclick="update(this)" width="30%"
                             src="../images/create-black-18dp.svg">
                         <!-- Adding Edit and Remove button -->    
                     </td>    
