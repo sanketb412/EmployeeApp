@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en" style= "background-color: slategrey;">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -10,56 +10,54 @@
     <link rel="stylesheet" href="../css/style.css">
     <!-- calling css for style -->
 </head>
-<body>
-    <div class="Header">
-        <div class="Header-Text ">Employee Form</div>
-        <!-- Added text inside Header -->
-    </div>
+<body class="body">
     <div class="container">
     <!-- declaring a Container where all div will get introduce     -->
+        <div class="Header">
+            <div class="Header-Text ">Employee Form</div>
+            <!-- Added text inside Header -->
+        </div>
         <div class="row-content">
         <!-- 1st div for Name  -->
-            <label class="label text">First Name:-</label>
+            <div class="label-text">First Name:-</div>
             <input class="input" type="text" placeholder="Your first name.." required>
             <error-output class="text-error" for="text"></error-output>
         </div>
         <div class="row-content">
         <!-- 2nd div for lastName  -->    
-            <label class="label text"> Last Name:-</label>
+            <div class="label-text"> Last Name:-</div>
             <input class="input" type="text" placeholder="Your last name.." required>
             <error-output class="text-error" for="text"></error-output>
         </div> 
         <div class="row-content">
         <!-- 3rd div for email  -->    
-            <label class="label text">Email ID:-    .</label>
+            <div class="label-text">Email ID:-</div>
             <input class="input" type="text" placeholder="Enter email.." required>
         </div>
         <div class="row-content">
         <!-- 4th div for contact  -->     
-            <label class="label text">Contact:-     .</label>
+            <div class="label-text">Contact:-</div>
             <input class="input" type="text" placeholder="Enter conatct.." required>
         </div>
         <div class="row-content">
         <!-- 5th div for Date  -->     
-            <label class="label text">Start Date:-</label>
+            <div class="label-text">Start Date:-</div>
             <input class="input" type="text" placeholder="Enter start date.." required>
         </div>
         <div class="row-content">
         <!-- 6th div for Salary  -->     
-            <label class="label text">Salary:-     .</label>
+            <div class="label-text">Salary:-</div>
             <input class="input" type="text" placeholder="Enter annual salary.." required>
         </div>
         <div class="row-content">
         <!-- 7th div for Notes  -->     
-            <label class="label text" >Notes</label>
+            <div class="label-text" >Notes</div>
             <textarea id="notes" class="input" name="notes" placeholder="" style="height:20px"></textarea>
         </div>
         <div class="button-content">
-        <!-- 8th div for buttons  -->     
-            <a href="../html/employee-dashboard.html" class="button cancelButton">Cancel</a>
-            <div class="submit-reset">
-                <button type="submit" class="button submitButton">Submit</button>
-                <button type="reset" class="resetButton button">Reset</button>
+        <!-- 8th div for buttons  -->   
+            <div class="click">
+                <button class="button" type="submit">Done</button>
             </div>
         </div>
     </div> <!-- Form gets end here-->
