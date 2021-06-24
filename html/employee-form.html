@@ -20,42 +20,98 @@
         <div class="row-content">
         <!-- 1st div for Name  -->
             <div class="label-text">First Name:-</div>
-            <input class="input" type="text" placeholder="First Name" id="firstName">
+            <input class="input" type="text" placeholder="First Name...." id="firstName">
             <error-output class="text-error" id="firstNameError"></error-output>
         </div>
         <div class="row-content">
         <!-- 2nd div for lastName  -->    
             <div class="label-text"> Last Name:-</div>
-            <input class="input" type="text" required>
-            <error-output class="text-error" for="text"></error-output>
+            <input class="input" type="text" placeholder="Last Name...." id="lastName">
+            <error-output class="text-error" id="lastNameError"></error-output>
         </div> 
         <div class="row-content">
         <!-- 3rd div for email  -->    
             <div class="label-text">Email ID:-</div>
-            <input class="input" type="text" required>
+            <input class="input" type="text" placeholder="E-Mail...." id="email">
+            <error-output class="text-error" id="emailError"></error-output>
         </div>
         <div class="row-content">
         <!-- 4th div for contact  -->     
             <div class="label-text">Contact:-</div>
-            <input class="input" type="text" required>
+            <input class="input" type="text" placeholder="Contact Number...." id="number">
+            <error-output class="text-error" id="numberError"></error-output>
+        </div>
+        <div class="row-contentD">
+            <!-- 5th div for Date -->  
+            <label class="label text" for="startDate">Start Date</label>
+            <div id="date">
+                <select id="day" name="Day">
+                    <option value="1">1</option>
+                    <option value="2">2</option>
+                    <option value="3">3</option>
+                    <option value="4">4</option>
+                    <option value="5">5</option>
+                    <option value="6">6</option>
+                    <option value="7">7</option>
+                    <option value="8">8</option>
+                    <option value="9">9</option>
+                    <option value="10">10</option>
+                    <option value="11">11</option>
+                    <option value="12">12</option>
+                    <option value="13">13</option>
+                    <option value="14">14</option>
+                    <option value="15">15</option>
+                    <option value="16">16</option>
+                    <option value="17">17</option>
+                    <option value="18">18</option>
+                    <option value="19">19</option>
+                    <option value="20">20</option>
+                    <option value="21">21</option>
+                    <option value="22">22</option>
+                    <option value="23">23</option>
+                    <option value="24">24</option>
+                    <option value="25">25</option>
+                    <option value="23">26</option>
+                    <option value="27">27</option>
+                    <option value="28">28</option>
+                    <option value="29">29</option>
+                    <option value="30">30</option>
+                    <option value="31">31</option>
+                </select>
+                <select id="month" name="Month">
+                    <option value="Jan">January</option>
+                    <option value="Feb">Febuary</option>
+                    <option value="Mar">March</option>
+                    <option value="Apr">April</option>
+                    <option value="May">May</option>
+                    <option value="Jun">June</option>
+                    <option value="Jul">July</option>
+                    <option value="Aug">August</option>
+                    <option value="Sep">Sepember</option>
+                    <option value="Oct">October</option>
+                    <option value="Nov">November</option>
+                    <option value="Dec">December</option>
+                </select>
+                <select id="year" name="Year">
+                    <option value="2021">2021</option>
+                    <option value="2020">2020</option>
+                    <option value="2019">2019</option>
+                    <option value="2018">2018</option>
+                    <option value="2017">2017</option>
+                    <option value="2016">2016</option>
+                </select>                
+            </div>
+            <error-output class="date-error" for="startDate"></error-output>
         </div>
         <div class="row-content">
-        <!-- 5th div for Date  -->     
-            <div class="label-text">Start Date:-</div>
-            <input class="input" type="text" required>
-        </div>
-        <div class="row-content">
-        <!-- 6th div for Salary  -->     
-            <div class="label-text">Salary:-</div>
-            <input class="input" type="text" required>
-        </div>
-        <div class="row-content">
-        <!-- 7th div for Notes  -->     
-            <div class="label-text" >Notes</div>
-            <textarea id="notes" class="input" name="notes" style="height:20px"></textarea>
-        </div>
+            <!-- 6th div for Salary  -->     
+                <div class="label-text">Salary:-</div>
+                <input class="input" type="text" placeholder="Salary...." id="salary">
+                <error-output class="text-error" id="salaryError"></error-output>
+            </div>
+
         <div class="button-content">
-        <!-- 8th div for buttons  -->   
+        <!-- 7th div for buttons  -->   
             <a href="../html/employee-dashboard.html" class="click">
                 <button class="button" type="submit">Done</button>
             </a>
