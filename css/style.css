@@ -47,6 +47,12 @@
     margin-left: -11px;
 }
 
+.text-error {
+    font-size: 12px;
+    font-style: italic;
+    color: red;
+}
+
 .button {
     background-color: rgb(81, 147, 201);
     border-color: whitesmoke;
