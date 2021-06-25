@@ -1,93 +1,47 @@
-// document.getElementById("firstName").oninput = function () { 
-//     var regex = RegExp('^[A-Z]{1}[a-zA-Z\\s]{2,}$');
-//     if(regex.test(this.value)) {
-//         document.getElementById('firstNameError').innerText=""
-//     } else {
-//         document.getElementById('firstNameError').innerText="First Name Incorrect"
-//     }
-// }
 
-// document.getElementById("lastName").oninput = function () { 
-//     var regex = RegExp('^[A-Z]{1}[a-zA-Z\\s]{2,}$');
-//     if(regex.test(this.value)) {
-//         document.getElementById('lastNameError').innerText=""
-//     } else {
-//         document.getElementById('lastNameError').innerText="Last Name Incorrect"
-//     }
-// }
+done = () => {
+    //declaring variable to specific id
+    let firstName = document.getElementById("firstName_Id").value;
+    let lastName = document.getElementById("lastName_Id").value;
+    let email = document.getElementById("email_Id").value;
+    let contact = document.getElementById("number_Id").value;
+    let date = document.getElementById("day").value;
+    let salary = document.getElementById("salary_Id").value;
 
-// document.getElementById("email").oninput = function () { 
-//     var regex = RegExp('^([a-zA-Z]{3,}([+_.-][a-z])*)+@[a-z]+.com$');
-//     if(regex.test(this.value)) {
-//         document.getElementById('emailError').innerText=""
-//     } else {
-//         document.getElementById('emailError').innerText="Email Incorrect"
-//     }
-// }
+    //calling Validation function
+    let firstNameCheck = validation(firstName, "firstNameError_Id", "First Name Incorrect")
+    let lastNameCheck = validation(lastName, "lastNameError_Id", "Last Name Incorrect")
+    let emailCheck = validation(email, "emailError_Id", "Email Incorrect")
+    let contactCheck = validation(contact, "numberError_Id", "Contact Incorrect")
+    let salaryCheck = validation(salary, "salaryError_Id", "fill the Salary")
 
-// document.getElementById("number").oninput = function () { 
-//     var regex = RegExp('^([789]{1}[0-9]{9})$');
-//     if(regex.test(this.value)) {
-//         document.getElementById('numberError').innerText=""
-//     } else {
-//         document.getElementById('numberError').innerText="contact Incorrect"
-//     }
-// }
-
-// document.getElementById("salary").oninput = function () { 
-//     var regex = RegExp('^[0-9]{1,}$');
-//     if(regex.test(this.value)) {
-//         document.getElementById('salaryError').innerText=""
-//     } else {
-//         document.getElementById('salaryError').innerText="fill the salary"
-//     }
-// }
-
-let valid = false;
-
-Done = () => {
-
-    let firstName = document.getElementById("firstName").value;
-    let lastName = document.getElementById("lastName").value;
-    let email = document.getElementById("email").value;
-    let contact = document.getElementById("number").value;
-    let salary = document.getElementById("salary").value;
-
-    validation(firstName, "firstNameError", "First Name Incorrect")
-    validation(lastName, "lastNameError", "Last Name Incorrect")
-    validation(email, "emailError", "Email Incorrect")
-    validation(contact, "numberError", "Contact Incorrect")
-    validation(salary, "salaryError", "fill the Salary")
-
-    if(valid) {
+    if (firstNameCheck && lastNameCheck && emailCheck && contactCheck && salaryCheck) {
         let userData = {
             firstName: firstName,
             lastName: lastName,
             email: email,
-            contact: contact,
+            contatc: contact,
+            data: date,
             salary: salary
-        }
-        window.alert('From valid');
-        addEmployee(userData)
-    } else {
-        window.alert('Form Invalid');
+        }   
+        addEmployee(userData);
     }
 }
 
 validation = (value, id, msg) => {
     if(value.length < 3) {
-        valid = false;
         document.getElementById(id).innerText=msg
+        return false; 
     } else {
-        valid = true;
         document.getElementById(id).innerText= ""
+        return true;
     }
 }
+
 
 addEmployee = (data) => {
     ajaxCalling('post', 'http://localhost:3000/employees', data)
 }
-
 ajaxCalling = (type, url, data) => {
     $.ajax({
         type: type,
