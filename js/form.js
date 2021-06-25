@@ -23,7 +23,7 @@ function getData() {
                     <td>${data[i].salary}</td>
                     <td>
                     <img id="1" onclick="remove(${data[i].id})" alt="delete" width=30% src="../images/delete-black-18dp.svg">
-                    <img id="1" alt="edit" onclick="update(this)" width=30% src="../images/create-black-18dp.svg">
+                    <img id="1" onclick="update(this)" alt="edit" width=30% src="../images/create-black-18dp.svg">
                     </td>
                 </tr>`;
             $('#table-display').append(row);

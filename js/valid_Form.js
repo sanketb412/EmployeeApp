@@ -6,7 +6,7 @@ done = () => {
     let lastName = document.getElementById("lastName_Id").value;
     let email = document.getElementById("email_Id").value;
     let contact = document.getElementById("number_Id").value;
-    let date = document.getElementById("day").value;
+    let date = document.getElementById("day","month","year").value;
     let salary = document.getElementById("salary_Id").value;
 
     //calling Validation function
