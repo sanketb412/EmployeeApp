@@ -48,7 +48,7 @@ ajaxCalling = (type, url, data) => {
         url: url,
         data: data,
         success: function (result) {
-            console.log(result);
+            window.location.href = "../html/employee-dashboard.html"
         },
         error: function (result) {
             console.log(result);
