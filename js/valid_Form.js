@@ -43,6 +43,8 @@
 //     }
 // }
 
+let valid = false;
+
 Done = () => {
 
     let firstName = document.getElementById("firstName").value;
@@ -53,15 +55,49 @@ Done = () => {
 
     validation(firstName, "firstNameError", "First Name Incorrect")
     validation(lastName, "lastNameError", "Last Name Incorrect")
-    validation(lastName, "emailError", "Email Incorrect")
-    validation(lastName, "numberError", "Contact Incorrect")
-    validation(lastName, "salaryError", "fill the Salary")
+    validation(email, "emailError", "Email Incorrect")
+    validation(contact, "numberError", "Contact Incorrect")
+    validation(salary, "salaryError", "fill the Salary")
+
+    if(valid) {
+        let userData = {
+            firstName: firstName,
+            lastName: lastName,
+            email: email,
+            contact: contact,
+            salary: salary
+        }
+        window.alert('From valid');
+        addEmployee(userData)
+    } else {
+        window.alert('Form Invalid');
+    }
 }
 
 validation = (value, id, msg) => {
     if(value.length < 3) {
+        valid = false;
         document.getElementById(id).innerText=msg
     } else {
+        valid = true;
         document.getElementById(id).innerText= ""
     }
+}
+
+addEmployee = (data) => {
+    ajaxCalling('post', 'http://localhost:3000/employees', data)
+}
+
+ajaxCalling = (type, url, data) => {
+    $.ajax({
+        type: type,
+        url: url,
+        data: data,
+        success: function (result) {
+            console.log(result);
+        },
+        error: function (result) {
+            console.log(result);
+        }
+    })
 }
