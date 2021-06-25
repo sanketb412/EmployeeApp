@@ -1,12 +1,12 @@
 
 done = () => {
     //declaring variable to specific id
-    let id = document.getElementById("id_Id").value;
     let firstName = document.getElementById("firstName_Id").value;
     let lastName = document.getElementById("lastName_Id").value;
     let email = document.getElementById("email_Id").value;
     let contact = document.getElementById("number_Id").value;
-    let date = document.getElementById("day","month","year").value;
+    //let date = document.getInputValueById('#day')+ " " +document.getInputValueById('#month')+ " " +document.getInputValueById('#year');
+    let date = document.getElementById("startDate_Id").value;
     let salary = document.getElementById("salary_Id").value;
 
     //calling Validation function
@@ -24,7 +24,6 @@ done = () => {
             contact: contact,
             data: date,
             salary: salary,
-            id: id
         }   
         addEmployee(userData);
     }

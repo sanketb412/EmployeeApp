@@ -27,7 +27,7 @@ function getData() {
                     </td>
                 </tr>`;
             $('#table-display').append(row);
-        }
+        }document.querySelector(".count").textContent = data.length;
     }
 }
 
@@ -38,6 +38,7 @@ const remove = (id) => {
         success: function (result) {
             console.log(result)
             window.location.reload();
+            document.querySelector(".count").textContent = data.length;
         },
         error: function (result) {
             console.log(result);

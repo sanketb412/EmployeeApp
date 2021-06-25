@@ -42,11 +42,13 @@
 }
 
 .Head {
-    padding: 0px 0px 2px 0px;
+    display: flex;
+    align-items: center;
+    font-size: 29px;
 }
 .count {
     width: -1px;
-    font-size: 35px;
+    font-size: 30px;
 }
 .table-main {
     width: 80%;
