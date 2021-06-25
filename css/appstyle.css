@@ -24,7 +24,7 @@
     border-radius: 7px;
     color: white;
     width: 80%;
-    margin: 44px auto;
+    margin: 10px auto;
     padding-bottom: 21px;      
 }
 
@@ -42,7 +42,7 @@
 }
 
 .Head {
-    padding: 20px 20px 2px 0px;
+    padding: 0px 0px 2px 0px;
 }
 .count {
     width: -1px;
@@ -54,8 +54,9 @@
     overflow: auto;
 }
 
-.table {
-    width: 100%;
+.table-main {
+    width: 80%;
+    height: 100%;
     min-width: 800px;
     border-spacing: 0mm;
     border-color: white;
@@ -64,9 +65,16 @@
     box-sizing: unset;
 }
 
+.table {
+    width: 100%;
+    border-collapse: separate;
+    border-spacing: 0 15px;
+    min-width: 800px;
+}
+
 td, th {
     text-align: left;
-    padding: 9px 11px;
+    padding: 4px 8px;
     Border: 1px solid #dddddd;
 }
 

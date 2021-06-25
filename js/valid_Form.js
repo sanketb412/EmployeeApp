@@ -1,6 +1,7 @@
 
 done = () => {
     //declaring variable to specific id
+    let id = document.getElementById("id_Id").value;
     let firstName = document.getElementById("firstName_Id").value;
     let lastName = document.getElementById("lastName_Id").value;
     let email = document.getElementById("email_Id").value;
@@ -22,18 +23,19 @@ done = () => {
             email: email,
             contact: contact,
             data: date,
-            salary: salary
+            salary: salary,
+            id: id
         }   
         addEmployee(userData);
     }
 }
 
-validation = (value, id, msg) => {
+validation = (value, idError, msg) => {
     if(value.length < 3) {
-        document.getElementById(id).innerText=msg
+        document.getElementById(idError).innerText=msg
         return false; 
     } else {
-        document.getElementById(id).innerText= ""
+        document.getElementById(idError).innerText= ""
         return true;
     }
 }

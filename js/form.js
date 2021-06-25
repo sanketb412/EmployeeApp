@@ -22,11 +22,25 @@ function getData() {
                     <td>${data[i].date}</td>
                     <td>${data[i].salary}</td>
                     <td>
-                    <img id="1" onclick="remove(this)" alt="delete" width=30% src="../images/delete-black-18dp.svg">
+                    <img id="1" onclick="remove(${data[i].id})" alt="delete" width=30% src="../images/delete-black-18dp.svg">
                     <img id="1" alt="edit" onclick="update(this)" width=30% src="../images/create-black-18dp.svg">
                     </td>
                 </tr>`;
             $('#table-display').append(row);
         }
     }
+}
+
+const remove = (id) => {
+    $.ajax({
+        type: 'DELETE',
+        url: 'http://localhost:3000/employees/' + id,
+        success: function (result) {
+            console.log(result)
+            window.location.reload();
+        },
+        error: function (result) {
+            console.log(result);
+        }
+    });
 }
