@@ -1,49 +1,22 @@
 {
   "employees": [
     {
-      "First_name": "sham",
-      "Last_name": "ron",
-      "E-mail": "kbabuxxxe@gmail.com",
-      "Contact": 212354521,
-      "Start_Date": "26 Nov 2020",
-      "Salary": 5000000,
-      "id": 1
-    },
-    {
-      "First_name": "Peter",
-      "Last_name": "Parker",
-      "E-mail": "ptptxxxe@gmail.com",
-      "Contact": 212454521,
-      "Start_Date": "26 Nov 2020",
-      "Salary": 900000,
-      "id": 2
-    },
-    {
       "firstName": "Sanket",
       "lastName": "Bagde",
-      "email": "sanketBagde@gmail.com",
-      "contatc": "8779763546",
+      "email": "sanketbagde38@gmail.com",
+      "contact": "8108425602",
       "data": "1",
-      "salary": "500000",
-      "id": 3
+      "salary": "232323",
+      "id": 1
     },
     {
       "firstName": "Vicky",
       "lastName": "Bagde",
-      "email": "vBagde@gmail.com",
-      "contatc": "3847573629",
+      "email": "vicky48@gmail.com",
+      "contact": "2345456654",
       "data": "1",
-      "salary": "4857",
-      "id": 4
-    },
-    {
-      "firstName": "Shweta",
-      "lastName": "Singh",
-      "email": "ssings",
-      "contatc": "3432433",
-      "data": "1",
-      "salary": "34324343",
-      "id": 5
+      "salary": "545345",
+      "id": 2
     }
   ]
 }

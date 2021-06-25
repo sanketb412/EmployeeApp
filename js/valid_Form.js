@@ -20,7 +20,7 @@ done = () => {
             firstName: firstName,
             lastName: lastName,
             email: email,
-            contatc: contact,
+            contact: contact,
             data: date,
             salary: salary
         }   
@@ -55,3 +55,4 @@ ajaxCalling = (type, url, data) => {
         }
     })
 }
+
