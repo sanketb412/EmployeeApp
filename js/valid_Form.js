@@ -20,7 +20,7 @@ done = () => {
             firstName: firstName,
             lastName: lastName,
             email: email,
-            contatc: contact,
+            contact: contact,
             data: date,
             salary: salary
         }   
@@ -48,10 +48,15 @@ ajaxCalling = (type, url, data) => {
         url: url,
         data: data,
         success: function (result) {
+<<<<<<< HEAD
             window.location.href = "../html/employee-dashboard.html"
+=======
+            window.location.href="../html/employee-dashboard.html"
+>>>>>>> UC4_Details_Table
         },
         error: function (result) {
             console.log(result);
         }
     })
 }
+

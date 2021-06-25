@@ -1,21 +1,21 @@
 {
   "employees": [
     {
-      "First_name": "sham",
-      "Last_name": "ron",
-      "E-mail": "kbabuxxxe@gmail.com",
-      "Contact": 212354521,
-      "Start_Date": "26 Nov 2020",
-      "Salary": 5000000,
+      "firstName": "Sanket",
+      "lastName": "Bagde",
+      "email": "sanketbagde38@gmail.com",
+      "contact": "8108425602",
+      "data": "1",
+      "salary": "232323",
       "id": 1
     },
     {
-      "First_name": "Peter",
-      "Last_name": "Parker",
-      "E-mail": "ptptxxxe@gmail.com",
-      "Contact": 212454521,
-      "Start_Date": "26 Nov 2020",
-      "Salary": 900000,
+      "firstName": "Vicky",
+      "lastName": "Bagde",
+      "email": "vicky48@gmail.com",
+      "contact": "2345456654",
+      "data": "1",
+      "salary": "545345",
       "id": 2
     }
   ]
