@@ -104,15 +104,12 @@ td {
     opacity: 1;
 }
 
-<<<<<<< HEAD
 
 td:first-child {
     display: flex;
     align-items: center;
 }
 
-=======
->>>>>>> UC4_Details_Table
 td img {
     cursor: pointer;
 }
