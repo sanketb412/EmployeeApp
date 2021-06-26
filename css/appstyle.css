@@ -24,7 +24,7 @@
     border-radius: 7px;
     color: white;
     width: 80%;
-    margin: 44px auto;
+    margin: 10px auto;
     padding-bottom: 21px;      
 }
 
@@ -42,11 +42,13 @@
 }
 
 .Head {
-    padding: 0px 0px 2px 0px;
+    display: flex;
+    align-items: center;
+    font-size: 29px;
 }
 .count {
     width: -1px;
-    font-size: 35px;
+    font-size: 30px;
 }
 .table-main {
     width: 80%;
@@ -105,10 +107,10 @@ td {
 }
 
 
-td:first-child {
+/* td:first-child {
     display: flex;
     align-items: center;
-}
+} */
 
 td img {
     cursor: pointer;

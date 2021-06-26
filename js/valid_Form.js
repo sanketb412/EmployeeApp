@@ -5,7 +5,8 @@ done = () => {
     let lastName = document.getElementById("lastName_Id").value;
     let email = document.getElementById("email_Id").value;
     let contact = document.getElementById("number_Id").value;
-    let date = document.getElementById("day").value;
+    let date = getInputValueById('#day')+ " " + getInputValueById('#month') +" "+ getInputValueById('#year');
+    let startDate = new Date(Date.parse(date));
     let salary = document.getElementById("salary_Id").value;
 
     //calling Validation function
@@ -21,19 +22,24 @@ done = () => {
             lastName: lastName,
             email: email,
             contact: contact,
-            data: date,
-            salary: salary
+            startData: startDate,
+            salary: salary,
         }   
         addEmployee(userData);
     }
 }
 
-validation = (value, id, msg) => {
+const getInputValueById = (id) => {
+    let dateValue = document.querySelector(id).value;
+    return dateValue;
+}
+
+validation = (value, idError, msg) => {
     if(value.length < 3) {
-        document.getElementById(id).innerText=msg
+        document.getElementById(idError).innerText=msg
         return false; 
     } else {
-        document.getElementById(id).innerText= ""
+        document.getElementById(idError).innerText= ""
         return true;
     }
 }
@@ -48,11 +54,7 @@ ajaxCalling = (type, url, data) => {
         url: url,
         data: data,
         success: function (result) {
-<<<<<<< HEAD
-            window.location.href = "../html/employee-dashboard.html"
-=======
             window.location.href="../html/employee-dashboard.html"
->>>>>>> UC4_Details_Table
         },
         error: function (result) {
             console.log(result);
