@@ -19,7 +19,7 @@ function getData() {
                     <td>${data[i].lastName}</td>
                     <td>${data[i].email}</td>
                     <td>${data[i].contact}</td>
-                    <td>${data[i].date}</td>
+                    <td>${data[i].startData}</td>
                     <td>${data[i].salary}</td>
                     <td>
                     <img id="1" onclick="remove(${data[i].id})" alt="delete" width=30% src="../images/delete-black-18dp.svg">

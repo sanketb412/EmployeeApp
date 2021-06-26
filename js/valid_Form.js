@@ -5,8 +5,8 @@ done = () => {
     let lastName = document.getElementById("lastName_Id").value;
     let email = document.getElementById("email_Id").value;
     let contact = document.getElementById("number_Id").value;
-    //let date = document.getInputValueById('#day')+ " " +document.getInputValueById('#month')+ " " +document.getInputValueById('#year');
-    let date = document.getElementById("startDate_Id").value;
+    let date = getInputValueById('#day')+ " " + getInputValueById('#month') +" "+ getInputValueById('#year');
+    let startDate = new Date(Date.parse(date));
     let salary = document.getElementById("salary_Id").value;
 
     //calling Validation function
@@ -22,11 +22,16 @@ done = () => {
             lastName: lastName,
             email: email,
             contact: contact,
-            data: date,
+            startData: startDate,
             salary: salary,
         }   
         addEmployee(userData);
     }
+}
+
+const getInputValueById = (id) => {
+    let dateValue = document.querySelector(id).value;
+    return dateValue;
 }
 
 validation = (value, idError, msg) => {
