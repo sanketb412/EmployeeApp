@@ -17,20 +17,28 @@
       "id": 15
     },
     {
-      "firstName": "Shweta",
+      "firstName": "Vicky",
       "lastName": "Bagde",
-      "email": "Bagdesingh",
-      "contact": "8779654854",
+      "email": "sanketbagde38@gmail.com",
+      "contact": "845484548",
       "salary": "500000",
       "id": 16
     },
     {
-      "firstName": "Amit",
-      "lastName": "Patil",
-      "email": "patilAmit@gmail.com",
-      "contact": "8796548545",
-      "salary": "500000",
+      "firstName": "Sam",
+      "lastName": "Paul",
+      "email": "paulS123@yahoo.com",
+      "contact": "9655856665",
+      "salary": "300000",
       "id": 17
+    },
+    {
+      "firstName": "Sam",
+      "lastName": "Paul",
+      "email": "paulS123@yahoo.com",
+      "contact": "9655856665",
+      "salary": "300000",
+      "id": 18
     }
   ]
 }

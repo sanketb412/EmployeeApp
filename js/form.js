@@ -22,7 +22,7 @@ function getData() {
                     <td>${data[i].salary}</td>
                     <td>
                     <img onclick="remove(${data[i].id})" width=20% src="../images/delete-black-18dp.svg" alt="delete">
-                    <img id="myBtn" src="../images/create-black-18dp.svg" class="button action-button myBtn" type="button" onclick="openModal('${data[i].id}','${data[i].firstName}','${data[i].lastName}','${data[i].email}','${data[i].contact}','${data[i].salary}')"> 
+                    <img id="myBtn" src="../images/create-black-18dp.svg" type="button" onclick="openModal('${data[i].firstName}','${data[i].lastName}','${data[i].email}','${data[i].contact}','${data[i].salary}')"> 
                     </td>
                 </tr>`;
                 $('#table-display').append(row);
@@ -53,7 +53,7 @@ function postData() {
         data: putUserData,
         success: function (result) {
             resetFields();
-            window.location.href = "/html/employee-dashboard.html";
+            window.location.href = "../html/employee-dashboard.html";
         },
         error: function (result) {
             console.log(result);
@@ -61,46 +61,45 @@ function postData() {
     });
 }
     
-// var modal = document.getElementById("myModal");
-// function openModal(id, firstName, lastName, email, contact, salary) {
-//     modal.style.display = "block";
+var modal = document.getElementById("myModal");
 
-//     document.getElementById("empid").value = id;
-//     document.getElementById("firstName_Id").value = firstName;
-//     document.getElementById("lastName_Id").value = lastName;
-//     document.getElementById("email_Id").value = email;
-//     document.getElementById("number_Id").value = contact;
-//     document.getElementById("salary_Id").value = salary;
-    
-// }
-// function putData() {
-//     let empid = document.getElementById("empid").value;
-//     let firstName = document.getElementById("firstName_Id").value;
-//     let lastName = document.getElementById("lastName_Id").value;
-//     let email = document.getElementById("email_Id").value;
-//     let contact = document.getElementById("number_Id").value;
-//     let salary = document.getElementById("salary").value;
-    
-//     let putUserData = {
-//         firstName: firstName,
-//         lastName: lastName,
-//         email: email,
-//         contact: contact,
-//         salary: salary
-//     }
+function openModal(firstName, lastName, email, contact, salary) {
+    modal.style.display = "block";
 
-//     $.ajax({
-//         type: 'PUT',
-//         url: 'http://localhost:3000/employees/' + empid,
-//         data: putUserData,
-//         success: function (result) {
-//             getData();
-//         },
-//         error: function (result) {
-//             console.log(result);
-//         }
-//     });
-// }
+    document.getElementById("firstName_Id").value = firstName;
+    document.getElementById("lastName_Id").value = lastName;
+    document.getElementById("email_Id").value = email;
+    document.getElementById("number_Id").value = contact;
+    document.getElementById("salary_Id").value = salary;
+    
+}
+function putData() {
+    let firstName = document.getElementById("firstName_Id").value;
+    let lastName = document.getElementById("lastName_Id").value;
+    let email = document.getElementById("email_Id").value;
+    let contact = document.getElementById("number_Id").value;
+    let salary = document.getElementById("salary").value;
+    
+    let putUserData = {
+        firstName: firstName,
+        lastName: lastName,
+        email: email,
+        contact: contact,
+        salary: salary
+    }
+
+    $.ajax({
+        type: 'PUT',
+        url: 'http://localhost:3000/employees/' + id,
+        data: putUserData,
+        success: function (result) {
+            getData();
+        },
+        error: function (result) {
+            console.log(result);
+        }
+    });
+}
 
 const remove = (id) => {
     $.ajax({

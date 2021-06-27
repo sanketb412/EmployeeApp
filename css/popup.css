@@ -17,16 +17,17 @@
 /* Modal Content */
 .modal-content {
   position: relative;
-  background-color: #fefefe;
+  background-color: beige;
   margin: auto;
   padding: 0;
   border: 1px solid #888;
-  width: 80%;
-  box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2),0 6px 20px 0 rgba(0,0,0,0.19);
+  width: 40%;
+  box-shadow: 4px 6px 13px;
   -webkit-animation-name: animatetop;
   -webkit-animation-duration: 0.4s;
   animation-name: animatetop;
-  animation-duration: 0.4s
+  animation-duration: 0.4s;
+  border-radius: 10px;
 }
 
 /* Add Animation */
@@ -57,14 +58,61 @@
 
 .modal-header {
   padding: 2px 16px;
-  background-color: #5cb85c;
-  color: white;
+  background-color: rgb(175, 155, 224);
+  color: rgb(0, 0, 0);
+  border-radius: 10px;
 }
 
-.modal-body {padding: 2px 16px;}
+.modal-body {
+    display: flex;
+    flex-direction: column;
+    align-content: stretch;
+    justify-content: space-evenly;
+    padding: 2px 16px;}
 
 .modal-footer {
-  padding: 2px 16px;
-  background-color: #5cb85c;
-  color: white;
+    display: flex;
+    justify-content: center;
+    padding: 2px 16px;
+    background-color: rgb(175, 155, 224);
+    color: white;
+    border-radius: 10px;
+}
+
+h2 {
+    display: flex;
+    justify-content: space-around;
+}
+
+.button {
+    background-color: rgb(81, 147, 201);
+    border-color: whitesmoke;
+    color: white;
+    border-radius: 5px;
+    padding: 5px 35px;
+    cursor: pointer;
+}
+
+.flex1 {
+    display: flex;
+    padding: 10px 20px 20px 40px;
+}
+
+.row-content2 {
+    margin: auto;
+}
+
+.row-content3 {
+    padding: 10px 20px 20px 145px;
+}
+
+.input {
+    height: 20px;
+    border: revert;
+    border-radius: 7px;
+}
+
+.head-text {
+    display: flex;
+    justify-content: space-evenly;
 }

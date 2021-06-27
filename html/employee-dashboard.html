@@ -12,6 +12,11 @@
 </head>
 <body class="body">
     <div class="main-content"> <!-- Declaring main content -->
+        <div class="head">
+            <h1 class="head-text">
+                Employee Pay-roll Dashboard
+            </h1>
+        </div>
         <div class="header-content">
             <a href="../html/employee-form.html" class="add-button">
                 <img src="../images/add-24px.svg" alt="">Add Employee  <!-- Locating Add User Button to redirect to Form Page -->
@@ -35,43 +40,50 @@
         </div> <!-- Table formate Ends here -->
     </div> <!-- main content ends here--> 
     
-    <    <div id="myModal" class="modal">
+    <div id="myModal" class="modal">
         <div class="modal-content">
             <div class="modal-header">
                 <span class="close">&times;</span>
                 <h2>Edit employee details</h2>
             </div>
             <div class="modal-body">
-                <div class="row-content">
+                <div class="flex1">
+                    <div class="row-content1">
                     <!-- 1st div for Name  -->
                         <div class="label-text">First Name:-</div>
                         <input class="input" type="text" placeholder="First Name...." id="firstName_Id">
                         <error-output class="text-error" id="firstNameError_Id"></error-output>
                     </div>
-                    <div class="row-content">
+                    <div class="row-content2">
                     <!-- 2nd div for lastName  -->    
                         <div class="label-text"> Last Name:-</div>
                         <input class="input" type="text" placeholder="Last Name...." id="lastName_Id">
                         <error-output class="text-error" id="lastNameError_Id"></error-output>
-                    </div> 
-                    <div class="row-content">
-                    <!-- 3rd div for email  -->    
+                    <style margin: auto></style>
+                    </div>
+                </div>
+                <div class="flex1">
+                    <div class="row-content1">
+                    <!-- 3rd div for email-->    
                         <div class="label-text">Email ID:-</div>
                         <input class="input" type="text" placeholder="E-Mail...." id="email_Id">
                         <error-output class="text-error" id="emailError_Id"></error-output>
                     </div>
-                    <div class="row-content">
+                    <div class="row-content2">
                     <!-- 4th div for contact  -->     
                         <div class="label-text">Contact:-</div>
                         <input class="input" type="text" placeholder="Contact Number...." id="number_Id">
                         <error-output class="text-error" id="numberError_Id"></error-output>
+                    <style margin: auto></style>
                     </div>
-                    <div class="row-content">
-                        <!-- 5th div for Salary  -->     
-                            <div class="label-text">Salary:-</div>
-                            <input class="input" type="text" placeholder="Salary...." id="salary_Id">
-                            <error-output class="text-error" id="salaryError_Id"></error-output>
-                        </div>
+                </div>
+                    <div class="row-content3">
+                    <!-- 5th div for Salary  -->     
+                        <div class="label-text">Salary:-</div>
+                        <input class="input" type="text" placeholder="Salary...." id="salary_Id">
+                        <error-output class="text-error" id="salaryError_Id"></error-output>
+                        <style margin: auto></style>
+                    </div>
             </div>
             <div class="modal-footer">
                 <button onclick="done()" class="button">Done</button>
