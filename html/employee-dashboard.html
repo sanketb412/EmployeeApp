@@ -5,6 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="../css/appstyle.css">
+    <link rel="stylesheet" href="../css/popup.css">
     <!-- calling css for style -->    
     <title>Employee Dashboard</title>
     <!-- added page title -->
@@ -27,17 +28,64 @@
                     <th>Last Name</th>
                     <th>Email</th>
                     <th>Contact</th>
-                    <th>Start Date</th>
                     <th>Salary</th>
                     <th>Actions</th>
                 </tr>
             </table>
         </div> <!-- Table formate Ends here -->
-    </div> <!-- main content ends here-->  
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"
-        integrity="sha512-894YE6QWD5I59HgZOGReFYm4dnWc1Qt5NtvYSaNcOP+u1T9qYdvdihz0PPSiiqn/+/3e7Jo4EaG7TubfWGUrMQ=="
-        crossorigin="anonymous" referrerpolicy="no-referrer">
-    </script>  
+    </div> <!-- main content ends here--> 
+    
+    <    <div id="myModal" class="modal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <span class="close">&times;</span>
+                <h2>Edit employee details</h2>
+            </div>
+            <div class="modal-body">
+                <div class="row-content">
+                    <!-- 1st div for Name  -->
+                        <div class="label-text">First Name:-</div>
+                        <input class="input" type="text" placeholder="First Name...." id="firstName_Id">
+                        <error-output class="text-error" id="firstNameError_Id"></error-output>
+                    </div>
+                    <div class="row-content">
+                    <!-- 2nd div for lastName  -->    
+                        <div class="label-text"> Last Name:-</div>
+                        <input class="input" type="text" placeholder="Last Name...." id="lastName_Id">
+                        <error-output class="text-error" id="lastNameError_Id"></error-output>
+                    </div> 
+                    <div class="row-content">
+                    <!-- 3rd div for email  -->    
+                        <div class="label-text">Email ID:-</div>
+                        <input class="input" type="text" placeholder="E-Mail...." id="email_Id">
+                        <error-output class="text-error" id="emailError_Id"></error-output>
+                    </div>
+                    <div class="row-content">
+                    <!-- 4th div for contact  -->     
+                        <div class="label-text">Contact:-</div>
+                        <input class="input" type="text" placeholder="Contact Number...." id="number_Id">
+                        <error-output class="text-error" id="numberError_Id"></error-output>
+                    </div>
+                    <div class="row-content">
+                        <!-- 5th div for Salary  -->     
+                            <div class="label-text">Salary:-</div>
+                            <input class="input" type="text" placeholder="Salary...." id="salary_Id">
+                            <error-output class="text-error" id="salaryError_Id"></error-output>
+                        </div>
+            </div>
+            <div class="modal-footer">
+                <button onclick="done()" class="button">Done</button>
+            </div>
+        </div>
+    </div>
+    <script>
+        var span = document.getElementsByClassName("close")[0];
+        span.onclick = function() {
+            modal.style.display = "none";
+        }
+    </script> 
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>  <!-- Defining ajex for html page-->
+    <script defer src="../js/valid_Form.js"></script>
     <script defer src="../js/form.js"></script>
     <script>
         $(document).ready(function () {
