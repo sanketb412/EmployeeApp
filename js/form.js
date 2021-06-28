@@ -22,7 +22,7 @@ function getData() {
                     <td>${data[i].salary}</td>
                     <td>
                     <img onclick="remove(${data[i].id})" width=20% src="../images/delete-black-18dp.svg" alt="delete">
-                    <img id="myBtn" src="../images/create-black-18dp.svg" type="button" onclick="openModal('${data[i].firstName}','${data[i].lastName}','${data[i].email}','${data[i].contact}','${data[i].salary}')"> 
+                    <img id="employee_Id" src="../images/create-black-18dp.svg" type="button" onclick="openPopUp('${data[i].id}','${data[i].firstName}','${data[i].lastName}','${data[i].email}','${data[i].contact}','${data[i].salary}')"> 
                     </td>
                 </tr>`;
                 $('#table-display').append(row);
@@ -31,39 +31,10 @@ function getData() {
         
     }
 }
-
-function postData() {
-    let firstName = document.getElementById("firstName_Id").value;
-    let lastName = document.getElementById("lastName_Id").value;
-    let email = document.getElementById("email_Id").value;
-    let contact = document.getElementById("number_Id").value;
-    let salary = document.getElementById("salary_Id").value;
-
-    let putUserData = {
-        firstName: firstName,
-        lastName: lastName,
-        email: email,
-        contact: contact,
-        salary: salary
-    }
-
-    $.ajax({
-        type: 'POST',
-        url: 'http://localhost:3000/employees',
-        data: putUserData,
-        success: function (result) {
-            resetFields();
-            window.location.href = "../html/employee-dashboard.html";
-        },
-        error: function (result) {
-            console.log(result);
-        }
-    });
-}
     
 var modal = document.getElementById("myModal");
 
-function openModal(firstName, lastName, email, contact, salary) {
+function openPopUp(Id, firstName, lastName, email, contact, salary) {
     modal.style.display = "block";
 
     document.getElementById("firstName_Id").value = firstName;
@@ -71,26 +42,29 @@ function openModal(firstName, lastName, email, contact, salary) {
     document.getElementById("email_Id").value = email;
     document.getElementById("number_Id").value = contact;
     document.getElementById("salary_Id").value = salary;
-    
+    document.getElementById("employee_Id").value = Id;
 }
-function putData() {
+
+function submitNewData() {
+    let Id = document.getElementById("employee_Id").value;
     let firstName = document.getElementById("firstName_Id").value;
     let lastName = document.getElementById("lastName_Id").value;
     let email = document.getElementById("email_Id").value;
     let contact = document.getElementById("number_Id").value;
-    let salary = document.getElementById("salary").value;
+    let salary = document.getElementById("salary_Id").value;
     
     let putUserData = {
+        Id: Id,
         firstName: firstName,
         lastName: lastName,
         email: email,
         contact: contact,
-        salary: salary
+        salary: salary,
     }
 
     $.ajax({
         type: 'PUT',
-        url: 'http://localhost:3000/employees/' + id,
+        url: 'http://localhost:3000/employees/' + Id,
         data: putUserData,
         success: function (result) {
             getData();

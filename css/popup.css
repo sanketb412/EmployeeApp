@@ -17,7 +17,7 @@
 /* Modal Content */
 .modal-content {
   position: relative;
-  background-color: beige;
+  background-color: #e6d6d6;
   margin: auto;
   padding: 0;
   border: 1px solid #888;
@@ -115,4 +115,10 @@ h2 {
 .head-text {
     display: flex;
     justify-content: space-evenly;
+}
+
+.text-error {
+    font-size: 12px;
+    font-style: italic;
+    color: red;
 }
